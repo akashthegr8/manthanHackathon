@@ -140,7 +140,11 @@ mainApp.controller('mainController', function($scope, $http) {
                 $scope.summaryGender["female"].gender = "Female"
                 $scope.summaryGender["NA"].gender = "Unknown"
                 
-                
+                $scope.summaryMStatus = {};
+                $scope.summaryMStatus["Married"] = {"category" : "married" , "count" : $scope.summaryGender["male"].Married + $scope.summaryGender["female"].Married}
+                $scope.summaryMStatus["Unmarried"] = {"category" : "unmarried" , "count" : $scope.summaryGender["male"].Single + $scope.summaryGender["female"].Single}
+                $scope.summaryMStatus["Unknown"] = {"category" : "unknown" , "count" : $scope.summaryGender["male"].Unknown + $scope.summaryGender["female"].Unknown}
+                $scope.summaryMStatus["NA"] = {"category" : "NA" , "count" :  $scope.summaryGender["NA"].NA}
                
                 
 /*

@@ -73,7 +73,7 @@
           
           
           
-<table class="table">
+<table class="table" >
   <thead class="thead-inverse">
     <tr>
       <th>Description</th>
@@ -89,7 +89,30 @@
     </tr>
   </tbody>
 </table>
-                    
+        
+          
+
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Description</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="i in summaryMStatus">
+    <tr>
+      <th scope="row">{{i.category}}</th>
+      <td>{{i.count}}</td>
+      
+      
+    </tr>
+  </tbody>
+</table>
+        
+          
+
+
           
           
           

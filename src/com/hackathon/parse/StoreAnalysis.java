@@ -68,6 +68,10 @@ public class StoreAnalysis {
 				}
 			}
 		}
+		
+		
+		
+		
 		File file = new File("res/storeData.json");
 		FileWriter fwr = new FileWriter(file);
 		System.out.printf("File is located at %s%n", file.getAbsolutePath());
