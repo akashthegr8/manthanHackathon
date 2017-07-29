@@ -22,10 +22,10 @@
 <button class="btn btn-primary" type="button" onClick="dataSummary()" >
   Data Summary<span class="badge"></span>
 </button>
-          <button class="btn btn-primary" type="button" onClick="showByIp()" >
+          <button class="btn btn-primary" type="button" onClick="graphs()" >
   Reports<span class="badge"></span>
 </button>
-          <button class="btn btn-primary" type="button" onClick="topShowByUser()" >
+          <button class="btn btn-primary" type="button" onClick="graphs()" >
   Graphs<span class="badge"></span>
 </button>
       
@@ -113,24 +113,11 @@
           
 
 
-          
-          
-          
-          <!--         
-  <table>
-  <tbody ng-repeat="i in summaryInteger">
-    <tr><td>{{i.name}}</td><td>{{$index}}</td></tr>
-    <tr ng-repeat="e in i.details">
-       <td>{{$index}}</td>
-       <td>{{e.foo}}</td>
-       <td>{{e.bar}}</td></tr>
-  </tbody>
-</table>        
-          -->
-          
-          
-          
-          
+  <div fusioncharts
+       width="900"
+       height="599"
+       type="pie3d"
+       dataSource="{{myDataSource}}" >
           
           
           
@@ -142,11 +129,7 @@
           
      <!--
           <button text="s" onClick="come()"></button>
-      <div fusioncharts
-       width="900"
-       height="599"
-       type="pie3d"
-       dataSource="{{myDataSource}}" >
+      
     </div>-->
 
     

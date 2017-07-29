@@ -8,7 +8,7 @@ mainApp.controller('mainController', function($scope, $http) {
 	$scope.backdrop = true;
 	$scope.promise = null;
        */         
- /*               $scope.myDataSource = {
+                $scope.myDataSource = {
     chart: {
         caption: "Count of Hits",
         subcaption: "Today",
@@ -26,7 +26,7 @@ mainApp.controller('mainController', function($scope, $http) {
        
     ]
 }
-                
+ /*               
     showByUser = function(){
 //         $scope.delay=1000; $scope.minDuration=1000;
         
@@ -113,9 +113,7 @@ mainApp.controller('mainController', function($scope, $http) {
     
     
     
-    come = function(){
-        console.log("here");
-    }
+    
     
     dataSummary = function(){
           
@@ -154,6 +152,37 @@ mainApp.controller('mainController', function($scope, $http) {
                     jsonElement.label = i;
                 });*/
             })
+        
+        
+        
+        
+    }
+    
+    
+    graphs = function(){
+        $http.get("http://127.0.0.1:8080/storeData.json")
+            .then(function (list) {
+              
+                $scope.myDataSource.data = [];
+                angular.forEach(list.data, function(val, i) {
+                    var jsonElement = {};
+                    var count = 0;
+                    angular.forEach(val, function(val1, i) {
+                        count +=val1.sales
+                        
+                    })
+                                    
+                    jsonElement.value = count;
+                    jsonElement.label = i;
+                    
+                    $scope.myDataSource.data.push(jsonElement);
+                });
+                    
+                });
+               
+         
+        
+        
         
         
         
