@@ -10,7 +10,7 @@ mainApp.controller('mainController', function($scope, $http) {
        */         
                 $scope.myDataSource = {
     chart: {
-        caption: "Count of Hits",
+        caption: "Count of Sales Contribution",
         subcaption: "Today",
         startingangle: "120",
         showlabels: "0",
@@ -19,95 +19,14 @@ mainApp.controller('mainController', function($scope, $http) {
         slicingdistance: "15",
         showpercentvalues: "1",
         showpercentintooltip: "0",
-        plottooltext: "Hit by: $label Total hit : $datavalue",
+        plottooltext: "Sales by : $label is : $datavalue",
         theme: "fint"
     },
     data: [
        
     ]
 }
- /*               
-    showByUser = function(){
-//         $scope.delay=1000; $scope.minDuration=1000;
-        
-              $http.get("http://localhost:8080/LogTracker/hello/"+$scope.inputValue+"/user")
-            .then(function (list) {
-                $scope.myDataSource.data = [];
-                angular.forEach(list.data, function(val, i) {
-                    var jsonElement = {};
-                    jsonElement.value = val;
-                    jsonElement.label = i;
-                    
-                    $scope.myDataSource.data.push(jsonElement);
-                    
-                    
-                });
-               
-            })
-            
-                }
-   
-    showByIp = function(){
-                   
-                $http.get("http://localhost:8080/LogTracker/hello/"+$scope.inputValue+"/ip")
-            .then(function (list) {
-                $scope.myDataSource.data = [];
-                angular.forEach(list.data, function(val, i) {
-                    var jsonElement = {};
-                    jsonElement.value = val;
-                    jsonElement.label = i;
-                    
-                    $scope.myDataSource.data.push(jsonElement);
-                    
-                    
-                });
-               
-            })
-                
-                }
-   
-    topShowByUser = function(){
-                   $http.get("http://localhost:8080/LogTracker/hello/"+$scope.inputValue+"/user")
-            .then(function (list) {
-                $scope.myDataSource.data = [];
-                angular.forEach(list.data, function(val, i) {
-                    var jsonElement = {};
-                    jsonElement.value = val;
-                    jsonElement.label = i;
-                    
-                    $scope.myDataSource.data.push(jsonElement);
-        var len = $scope.myDataSource.data.length;
-        $scope.myDataSource.data.splice(0, len-5);
-                    
-                    
-                });
-               
-            })
-    
-        
-    }
-    
-    
-    topShowByIp = function(){
-        $http.get("http://localhost:8080/LogTracker/hello/"+$scope.inputValue+"/ip")
-            .then(function (list) {
-                $scope.myDataSource.data = [];
-                angular.forEach(list.data, function(val, i) {
-                    var jsonElement = {};
-                    jsonElement.value = val;
-                    jsonElement.label = i;
-                    
-                    $scope.myDataSource.data.push(jsonElement);
-                    
-        var len = $scope.myDataSource.data.length;
-        $scope.myDataSource.data.splice(0, len-5);
-                    
-                });
-               
-            })
-        
-    }
-    */
+ 
     
     
     
