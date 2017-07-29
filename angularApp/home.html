@@ -1,0 +1,138 @@
+<html>
+<script type="text/javascript" src="C:/Users/I329624/node_modules/fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript" src="C:/Users/I329624/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="C:/Users/I329624/node_modules/angular-fusioncharts-master/src/angular-fusioncharts.js"></script>
+<script type="text/javascript" src="mainController.js"></script>
+<script type="text/javascript" src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css"/>
+<link href="busyindicator/angular-busy.css" rel="stylesheet">
+<script src="busyindicator/angular-busy.js"></script>
+<head  >
+    <Title>Data Analysis</Title>
+    </head>
+<body style="margin:10;padding:10">
+      
+   <center>
+      <div ng-app = "mainApp" ng-controller = "mainController">
+      
+          
+<!--<input type="text" ng-model="inputValue" size="40px"></input> 
+       -->
+       
+<button class="btn btn-primary" type="button" onClick="dataSummary()" >
+  Data Summary<span class="badge"></span>
+</button>
+          <button class="btn btn-primary" type="button" onClick="showByIp()" >
+  Reports<span class="badge"></span>
+</button>
+          <button class="btn btn-primary" type="button" onClick="topShowByUser()" >
+  Graphs<span class="badge"></span>
+</button>
+      
+          
+          <tbody ng-repeat="i in phones">
+    <tr><td>{{i.name}}</td><td>{{$index}}</td></tr>
+    <tr ng-repeat="e in i.details">
+       <td>{{$index}}</td>
+       <td>{{e.foo}}</td>
+       <td>{{e.bar}}</td></tr>
+  </tbody>
+          
+          
+ <table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Record Count</th>
+      <th>Null Count</th>
+      <th>Zero Count</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Mean</th>
+      <th>Median</th>
+      <th>Standard Deviation</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="i in summaryInteger">
+    <tr>
+      <th scope="row">{{i.header}}</th>
+      <td>{{i.totalcount}}</td>
+      <td>{{i.nullCount}}</td>
+      <td>{{i.zeroCount}}</td>
+      <td>{{i.min}}</td>
+      <td>{{i.max}}</td>
+      <td>{{i.mean}}</td>
+      <td>{{i.median}}</td>
+      <td>{{i.standarddeviation}}</td>
+    </tr>
+  </tbody>
+</table>
+          
+          
+          
+          
+          
+          
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Description</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="i in summaryGender">
+    <tr>
+      <th scope="row">{{i.gender}}</th>
+      <td>{{i.totalcount}}</td>
+      
+      
+    </tr>
+  </tbody>
+</table>
+                    
+          
+          
+          
+          <!--         
+  <table>
+  <tbody ng-repeat="i in summaryInteger">
+    <tr><td>{{i.name}}</td><td>{{$index}}</td></tr>
+    <tr ng-repeat="e in i.details">
+       <td>{{$index}}</td>
+       <td>{{e.foo}}</td>
+       <td>{{e.bar}}</td></tr>
+  </tbody>
+</table>        
+          -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+     <!--
+          <button text="s" onClick="come()"></button>
+      <div fusioncharts
+       width="900"
+       height="599"
+       type="pie3d"
+       dataSource="{{myDataSource}}" >
+    </div>-->
+
+    
+      </div>
+    
+    </center> 
+    
+      
+    
+      
+   </body>
+</html>
